@@ -1,5 +1,5 @@
 <h2>{{courseData.description}}</h2>
-<form [formGroup]="courseForm" (submit)="onCourseUpdate()">
+<form [formGroup]="courseForm"  (submit)="onCourseUpdate()">
 <mat-dialog-content>
     <mat-form-field>
         <input matInput placeholder="Course Description" formControlName="description" type="text">
@@ -19,7 +19,7 @@
         <input  matInput formControlName="longDescription" placeholder="Long Description">
     </mat-form-field>
 </mat-dialog-content>
-<mat-card-actions>
+<mat-card-actions #side>
     <button mat-raised-button color="primary"
     type="button">Close</button>
     <button mat-raised-button color="primary"
