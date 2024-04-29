@@ -9,6 +9,7 @@ const routes: Routes = [
     path :"",
     component :HomeComponent
     },
+    
     {
     path :"about",
     component :AboutComponent
@@ -16,6 +17,10 @@ const routes: Routes = [
      {
       path :"courses/:courseId",
       component : CourseDetailsComponent
+       },
+       {
+        path:"**",
+        redirectTo:"/"
        }
 ];
 
