@@ -1,0 +1,11 @@
+<div class="courses-panels">
+    <h2>All Courses</h2>
+    <mat-tab-group>
+        <mat-tab label="Begginers">
+            <app-course-list [courseArr]="beginnerCourses$ | async"></app-course-list>
+        </mat-tab>
+        <mat-tab label="Advanced">
+            <app-course-list [courseArr]="advancedCourses$ | async"></app-course-list>
+        </mat-tab>
+    </mat-tab-group>
+</div>

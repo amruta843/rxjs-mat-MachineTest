@@ -1,0 +1,29 @@
+<h2>{{courseData.description}}</h2>
+<form [formGroup]="courseForm" (submit)="onCourseUpdate()">
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Course Description" formControlName="description" type="text">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select formControlName="category"  placeholder="Course Category">
+            <mat-option value="BEGINNER">
+                Beginner
+            </mat-option>
+            <mat-option value="ADVANCED">
+                Advanced
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+   
+    <mat-form-field>
+        <input  matInput formControlName="longDescription" placeholder="Long Description">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-card-actions>
+    <button mat-raised-button color="primary"
+    type="button">Close</button>
+    <button mat-raised-button color="primary"
+    type="submit">Save</button>
+</mat-card-actions>
+</form>
+

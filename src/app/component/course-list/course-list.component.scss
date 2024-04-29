@@ -1,0 +1,15 @@
+.course-card{
+    margin: 20px 0;
+    
+    .mat-action{
+        display: flex;
+        justify-content: space-between;
+    }
+    }
+    
+    ::ng-deep{
+        .mat-tab-label{
+            flex-grow: 1;
+    
+        }
+    }

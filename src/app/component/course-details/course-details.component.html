@@ -1,0 +1,29 @@
+
+<div class="courses">
+
+    <ng-container *ngIf="(courseObj$ | async) as course">
+        <h2>{{course.description}}</h2>
+        <img [src]="course.iconUrl" alt="">
+    </ng-container>
+    <mat-form-field class="mt-4">
+        <input type="text" matInput #searchBar placeholder="Search Lesson" (keyup)="onSearch(searchBar)">
+    </mat-form-field>
+    <table class="lessons-table mat-elevation-z7"  *ngIf="(lessons$ | async) as lessons; else nolesson">
+        <thead>
+            <th>Sr. No.</th>
+            <th>Discription</th>
+            <th>Duration</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lesson of lessons">
+            <td>{{lesson.seqNo}}</td>
+            <td>{{lesson.description}}</td>
+            <td>{{lesson.duration}}</td>
+            </tr>
+        </tbody>
+       
+    </table>
+    <ng-template #nolesson>
+       <p>No record is available yet!</p>
+    </ng-template>
+    </div>
