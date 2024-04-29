@@ -54,13 +54,15 @@ export class CourseDialogComponent implements OnInit {
     console.log(obj);
   
   this._courseService.updateCourse(obj)
-  .pipe(
-    
-  )
+  .pipe(switchMap(value=>{
+    let courseObj={...value, id:this.courseData.id}
+    return this._courseService.updateCourse(courseObj)
+ }) )
   .subscribe(res=>{
   console.log( res);
   
 })}
+
     
   }
 }
