@@ -21,9 +21,9 @@
 </mat-dialog-content>
 <mat-card-actions #side>
     <button mat-raised-button color="primary"
-    type="button">Close</button>
+    type="button"[mat-dialog-close]="false">Close</button>
     <button mat-raised-button color="primary"
-    type="submit">Save</button>
+    type="submit" >Save</button>
 </mat-card-actions>
 </form>
 
